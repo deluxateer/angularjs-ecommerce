@@ -11,9 +11,9 @@ ec.directive('product', [
   () => ({
     restrict: 'E',
     scope: {
-      info: '='
+      product: '='
     },
-    template: '<h3>hello</h3>',
+    template: '<p>{{product.name}}</p>',
     controller: $scope => {}
   })
 ]);
