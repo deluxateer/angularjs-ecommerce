@@ -1,0 +1,29 @@
+{
+  "name": "angularjs-ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify js/index.js -o js/bundle.js",
+    "watch": "browser-sync -w",
+    "buildwatch": "npm run build && npm run watch",
+    "bw": "npm run buildwatch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deluxateer/angularjs-ecommerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deluxateer/angularjs-ecommerce/issues"
+  },
+  "homepage": "https://github.com/deluxateer/angularjs-ecommerce#readme",
+  "dependencies": {
+    "browserify": "^16.5.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}

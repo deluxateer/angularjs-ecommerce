@@ -1,3 +1,17 @@
-const ec = angular.module('eCommerce');
+const storeController = require('./controllers/StoreController');
 
-ec.controller('StoreController', ['$scope', function($scope){}]);
+const ec = angular.module('eCommerce', ['ngRoute']);
+
+ec.config(['$routeProvider', function($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: '../views/components/store.html',
+      controller: 'StoreController',
+    })
+    .otherwise({
+      redirectTo: '/',
+    })
+}])
+
+storeController(ec);
+
