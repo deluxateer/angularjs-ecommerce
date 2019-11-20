@@ -76,7 +76,31 @@
       </ul>
       <div class="row">
         <h2>Checkout</h2>
-        
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12 m10 l6">
+              <input placeholder="John Doe" id="full-name" type="text">
+              <label for="full-name">Full Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m10 l6">
+              <input id="card-number" type="text">
+              <label for="card-number">Card Number</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6 l2">
+              <input id="expiration-date" type="text">
+              <label for="expiration-date">Expiration</label>
+            </div>
+            <div class="input-field col s6 l2">
+              <input id="cvv" type="text">
+              <label for="cvv">CVV</label>
+            </div>
+          </div>
+          <input type="submit" class="waves-effect waves-light btn right white-text" value="Add to Cart" />
+        </form>
       </div>
     </div>
   </main>
