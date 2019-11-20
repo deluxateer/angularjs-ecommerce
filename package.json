@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "browserify js/index.js -o js/bundle.js",
-    "watch": "browser-sync -w",
-    "buildwatch": "npm run build && npm run watch",
-    "bw": "npm run buildwatch"
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "buildwatch": "gulp",
+    "bw": "gulp"
   },
   "repository": {
     "type": "git",
@@ -20,10 +20,11 @@
     "url": "https://github.com/deluxateer/angularjs-ecommerce/issues"
   },
   "homepage": "https://github.com/deluxateer/angularjs-ecommerce#readme",
-  "dependencies": {
-    "browserify": "^16.5.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "browserify": "^16.5.0",
+    "gulp": "^4.0.2",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
