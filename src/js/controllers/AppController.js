@@ -13,7 +13,6 @@ module.exports = mod => {
       };
 
       $scope.updateCart = (product, requestedQuantity) => {
-        console.log('im called');
         for (cartItem of $scope.cart) {
           if (cartItem.name === product.name) {
             cartItem.quantity = cartItem.quantity + requestedQuantity;

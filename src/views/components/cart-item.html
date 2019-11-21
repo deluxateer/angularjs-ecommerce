@@ -4,7 +4,6 @@
   <p>Item Price: ${{price.toFixed(2)}}</p>
   <p>Quantity: {{quantity}}</p>
   <p><b>Subtotal: ${{(quantity * price).toFixed(2)}}</b></p>
-  <p>{{remove-from-cart}}</p>
   <div class="secondary-content">
     <button
       ng-click="updateCart({name, price, quantity, image}, 1)"

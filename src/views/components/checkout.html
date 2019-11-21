@@ -20,33 +20,59 @@
     </h3>
     <div class="row">
       <h2>Checkout</h2>
-      <form class="col s12">
+      <form
+        name="billingForm"
+        ng-submit="submitBilling(billing)"
+        novalidate
+        class="col s12"
+      >
         <div class="row">
           <div class="input-field col s12 m10 l6">
-            <input id="full-name" type="text" />
-            <label for="full-name">Full Name</label>
+            <input
+              id="full-name"
+              ng-model="billing.fullName"
+              ng-required="true"
+              type="text"
+            />
+            <label for="full-name">* Full Name</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12 m10 l6">
-            <input id="card-number" type="text" />
-            <label for="card-number">Card Number</label>
+            <input
+              id="card-number"
+              ng-model="billing.cardNumber"
+              ng-required="true"
+              type="text"
+            />
+            <label for="card-number">* Card Number</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6 l2">
-            <input id="expiration-date" type="text" />
-            <label for="expiration-date">Expiration</label>
+            <input
+              id="expiration-date"
+              ng-model="billing.expirationDate"
+              ng-required="true"
+              type="text"
+            />
+            <label for="expiration-date">* Expiration</label>
           </div>
           <div class="input-field col s6 l2">
-            <input id="cvv" type="text" />
-            <label for="cvv">CVV</label>
+            <input
+              id="cvv"
+              ng-model="billing.cvv"
+              ng-required="true"
+              type="text"
+            />
+            <label for="cvv">* CVV</label>
           </div>
         </div>
         <input
           type="submit"
           class="waves-effect waves-light btn right white-text"
           value="Add to Cart"
+          ng-disabled="billingForm.$invalid"
         />
       </form>
     </div>
