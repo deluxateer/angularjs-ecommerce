@@ -1,36 +1,42 @@
 [
   {
+    "id": 0,
     "name": "Canon PowerShot G7",
     "description": "Combining professional-level photography within a slim body, this Canon Powershot camera gives you the best of DSLR photography with compact camera convenience.",
     "price": 649.99,
     "image": "https://picsum.photos/300/200"
   },
   {
+    "id": 1,
     "name": "Nikon - D3500 ",
     "description": "You don't need to be a photographer to know a great photo when you see one. And you don't need to be a photographer to take a great photo - you just need the D3500.",
     "price": 399.99,
     "image": "https://picsum.photos/300/200"
   },
   {
+    "id": 2,
     "name": "Sony W800/B 20MP",
     "description": "This incredibly easy to use Sony DSC-W800/B Black Digital Camera with 20.1 Megapixels slips right in your pocket, ready to capture a memory at a moment's notice. ",
     "price": 99.99,
     "image": "https://picsum.photos/300/200"
   },
   {
+    "id": 3,
     "name": "Sony - DSC-H300 20.1-MP",
     "description": "The sony cyber-shot dsc-h300 digital camera is a point-and-shoot camera featuring a 20.1 Mp 1/2. 3in super had ccd image sensor for producing high resolution still imagery.",
     "price": 199.99,
     "image": "https://picsum.photos/300/200"
   },
   {
+    "id": 4,
     "name": "Nikon D5600 24.2 MP SLR",
     "description": "Nikon's D5600 digital SLR camera is made for creating in a more connected world. Working with the SnapBridge app, it stays in constant communication with your smart device.",
     "price": 799.99,
     "image": "https://picsum.photos/300/200"
   },
   {
-    "name": "Canon - EOS M3 Mirrorless Camera with EF-M 18-55mm Lens",
+    "id": 5,
+    "name": "Canon - EOS M3 Mirrorless",
     "description": "This is a powerful Compact System Camera created for enthusiast photographers who demand premium performance.",
     "price": 599.99,
     "image": "https://picsum.photos/300/200"

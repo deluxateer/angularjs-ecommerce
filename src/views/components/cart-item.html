@@ -1,0 +1,18 @@
+<li class="collection-item avatar">
+  <img ng-src="{{image}}" alt="{{name}}" class="circle" />
+  <span class="title">{{name}}</span>
+  <p>Item Price: ${{price.toFixed(2)}}</p>
+  <p>Quantity: {{quantity}}</p>
+  <p><b>Subtotal: ${{(quantity * price).toFixed(2)}}</b></p>
+  <div class="secondary-content">
+    <button class="waves-effect waves-light btn-flat btn-small">
+      +1
+    </button>
+    <button class="waves-effect waves-light btn-flat btn-small">
+      -1
+    </button>
+    <button class="waves-effect waves-light btn red btn-small">
+      Remove
+    </button>
+  </div>
+</li>

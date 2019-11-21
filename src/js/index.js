@@ -1,5 +1,9 @@
 const init = require('./config');
+const productDirective = require('./directives/product');
+const cartItemDirective = require('./directives/cartItem.js');
+const appController = require('./controllers/AppController');
 const storeController = require('./controllers/StoreController');
+const checkoutController = require('./controllers/CheckoutController');
 
 const ec = angular.module('eCommerce', ['ngRoute']);
 
@@ -7,16 +11,10 @@ const ec = angular.module('eCommerce', ['ngRoute']);
 init(ec);
 
 // Include Directives
-ec.directive('product', [
-  () => ({
-    restrict: 'E',
-    scope: {
-      product: '='
-    },
-    template: '<p>{{product.name}}</p>',
-    controller: $scope => {}
-  })
-]);
+productDirective(ec);
+cartItemDirective(ec);
 
 // Include Controllers
+appController(ec);
 storeController(ec);
+checkoutController(ec);
