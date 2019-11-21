@@ -12,9 +12,18 @@
         >{{product.name}}</span
       >
       <p class="center-align" style="font-weight: 700;">${{product.price}}</p>
-      <form id="quantity-{{product.id}}">
+      <form
+        id="quantity-{{product.id}}"
+        ng-submit="updateCart(product, quantity)"
+      >
         <span>Quantity: </span
-        ><input type="number" name="quantity" value="1" min="1" />
+        ><input
+          type="number"
+          name="quantity"
+          ng-model="quantity"
+          ng-init="quantity = 1"
+          min="1"
+        />
       </form>
     </div>
     <div class="card-action">

@@ -6,7 +6,9 @@ module.exports = mod => {
         name: '=',
         price: '=',
         quantity: '=',
-        image: '='
+        image: '=',
+        updateCart: '=',
+        removeFromCart: '='
       },
       templateUrl: './src/views/components/cart-item.html',
       replace: true

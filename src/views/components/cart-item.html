@@ -4,14 +4,24 @@
   <p>Item Price: ${{price.toFixed(2)}}</p>
   <p>Quantity: {{quantity}}</p>
   <p><b>Subtotal: ${{(quantity * price).toFixed(2)}}</b></p>
+  <p>{{remove-from-cart}}</p>
   <div class="secondary-content">
-    <button class="waves-effect waves-light btn-flat btn-small">
+    <button
+      ng-click="updateCart({name, price, quantity, image}, 1)"
+      class="waves-effect waves-light btn-flat btn-small"
+    >
       +1
     </button>
-    <button class="waves-effect waves-light btn-flat btn-small">
+    <button
+      ng-click="updateCart({name, price, quantity, image}, -1)"
+      class="waves-effect waves-light btn-flat btn-small"
+    >
       -1
     </button>
-    <button class="waves-effect waves-light btn red btn-small">
+    <button
+      ng-click="removeFromCart({name, price, quantity, image})"
+      class="waves-effect waves-light btn red btn-small"
+    >
       Remove
     </button>
   </div>

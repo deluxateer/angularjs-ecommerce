@@ -1,27 +1,42 @@
+const M = require('../lib/materialize.min');
+
 module.exports = mod => {
   mod.controller('AppController', [
     '$scope',
     function($scope) {
-      $scope.cart = [
-        {
-          name: 'wam',
-          price: 30.0,
-          quantity: 2,
-          image: 'https://picsum.photos/300/200'
-        },
-        {
-          name: 'slam',
-          price: 70.0,
-          quantity: 1,
-          image: 'https://picsum.photos/300/200'
-        },
-        {
-          name: 'dam',
-          price: 5.0,
-          quantity: 4,
-          image: 'https://picsum.photos/300/200'
+      $scope.cart = [];
+
+      $scope.removeFromCart = cartItem => {
+        $scope.cart = $scope.cart.filter(
+          itemInCart => itemInCart.name !== cartItem.name
+        );
+      };
+
+      $scope.updateCart = (product, requestedQuantity) => {
+        console.log('im called');
+        for (cartItem of $scope.cart) {
+          if (cartItem.name === product.name) {
+            cartItem.quantity = cartItem.quantity + requestedQuantity;
+
+            if (cartItem.quantity === 0) {
+              $scope.removeFromCart(cartItem);
+              M.toast({ html: `${cartItem.name} has been removed` });
+              return;
+            }
+
+            M.toast({ html: 'The cart has been updated' });
+            return;
+          }
         }
-      ];
+
+        $scope.cart.push({
+          name: product.name,
+          price: product.price,
+          quantity: requestedQuantity,
+          image: product.image
+        });
+        M.toast({ html: `Added ${product.name}` });
+      };
     }
   ]);
 };

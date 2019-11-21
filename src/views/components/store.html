@@ -1,5 +1,9 @@
 <div class="container" style="padding-top: 20px;">
   <div class="row">
-    <product ng-repeat="product in products" product="product"></product>
+    <product
+      ng-repeat="product in products"
+      product="product"
+      update-cart="updateCart"
+    ></product>
   </div>
 </div>

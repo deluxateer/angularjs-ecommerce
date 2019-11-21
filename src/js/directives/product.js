@@ -3,7 +3,8 @@ module.exports = mod => {
     () => ({
       restrict: 'E',
       scope: {
-        product: '='
+        product: '=',
+        updateCart: '='
       },
       templateUrl: './src/views/components/product.html',
       replace: true

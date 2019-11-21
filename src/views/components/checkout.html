@@ -1,45 +1,54 @@
 <div class="container" style="padding-top: 20px;">
-  <ul class="collection">
-    <li ng-repeat="cartItem in cart">
-      <cart-item
-        name="cartItem.name"
-        price="cartItem.price"
-        quantity="cartItem.quantity"
-        image="cartItem.image"
-      ></cart-item>
-    </li>
-  </ul>
-  <h3 class="right-align">Total: ${{(calculateTotal(cart)).toFixed(2)}}</h3>
-  <div class="row">
-    <h2>Checkout</h2>
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12 m10 l6">
-          <input id="full-name" type="text" />
-          <label for="full-name">Full Name</label>
+  <div ng-show="cart.length === 0" style="padding-bottom: 1rem;">
+    <h4>You currently have nothing in your cart.</h4>
+  </div>
+  <div ng-show="cart.length > 0">
+    <ul class="collection">
+      <li ng-repeat="cartItem in cart">
+        <cart-item
+          name="cartItem.name"
+          price="cartItem.price"
+          quantity="cartItem.quantity"
+          image="cartItem.image"
+          update-cart="updateCart"
+          remove-from-cart="removeFromCart"
+        ></cart-item>
+      </li>
+    </ul>
+    <h3 class="right-align">
+      Total: ${{(calculateTotal(cart)).toFixed(2)}}
+    </h3>
+    <div class="row">
+      <h2>Checkout</h2>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12 m10 l6">
+            <input id="full-name" type="text" />
+            <label for="full-name">Full Name</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12 m10 l6">
-          <input id="card-number" type="text" />
-          <label for="card-number">Card Number</label>
+        <div class="row">
+          <div class="input-field col s12 m10 l6">
+            <input id="card-number" type="text" />
+            <label for="card-number">Card Number</label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6 l2">
-          <input id="expiration-date" type="text" />
-          <label for="expiration-date">Expiration</label>
+        <div class="row">
+          <div class="input-field col s6 l2">
+            <input id="expiration-date" type="text" />
+            <label for="expiration-date">Expiration</label>
+          </div>
+          <div class="input-field col s6 l2">
+            <input id="cvv" type="text" />
+            <label for="cvv">CVV</label>
+          </div>
         </div>
-        <div class="input-field col s6 l2">
-          <input id="cvv" type="text" />
-          <label for="cvv">CVV</label>
-        </div>
-      </div>
-      <input
-        type="submit"
-        class="waves-effect waves-light btn right white-text"
-        value="Add to Cart"
-      />
-    </form>
+        <input
+          type="submit"
+          class="waves-effect waves-light btn right white-text"
+          value="Add to Cart"
+        />
+      </form>
+    </div>
   </div>
 </div>

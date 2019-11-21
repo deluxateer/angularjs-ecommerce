@@ -26,8 +26,6 @@ function watchTask() {
     open: 'external',
     port: 9000
   });
-  // gulp.watch('./js/*.js', build);
-  // gulp.watch(['./*.html', './*.css', './js/*.js']).on('change', browserSync.reload);
   gulp.watch('./src/js/**/*.js', build);
   gulp.watch(['./index.html', './src/**/*.*']).on('change', browserSync.reload);
 }
