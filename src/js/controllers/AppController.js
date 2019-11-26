@@ -10,6 +10,7 @@ module.exports = mod => {
         $scope.cart = $scope.cart.filter(
           itemInCart => itemInCart.name !== cartItem.name
         );
+        M.toast({ html: `${cartItem.name} has been removed` });
       };
 
       $scope.updateCart = (product, requestedQuantity) => {
@@ -19,7 +20,6 @@ module.exports = mod => {
 
             if (cartItem.quantity === 0) {
               $scope.removeFromCart(cartItem);
-              M.toast({ html: `${cartItem.name} has been removed` });
               return;
             }
 
